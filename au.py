@@ -91,15 +91,3 @@ class Node:
     
     def __call__(self):
         return Node()
-    
-x = 2
-y = 4
-z = Node(x / y)
-w = Node(x * y)
-
-print(f"{z}")
-print(f"{w.backward()}")
-
-#The gradients are now stored in the gradient attribute of each node
-print("Gradient with respect to z:", z.grad)
-print("Gradient with respect to w:", w.grad)
